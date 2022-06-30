@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ImportResource;
 //@ImportResource(locations = {"classpath:bean.xml"})
 @SpringBootApplication
 public class SpringbootApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(SpringbootApplication.class, args);
     }

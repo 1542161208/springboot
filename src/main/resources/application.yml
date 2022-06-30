@@ -1,7 +1,8 @@
 server:
   port: 8081
+  servlet:
+    context-path: /test
 
-#指定激活那个环境
 spring:
   profiles:
     active: dev
@@ -26,6 +27,49 @@ person:
     name: ${person.last-name:moren}小狗
     age: 12
   last-name: xiaoming
+
+#指定范围设置日志的输出级别
+#logging:
+#  level: { com.example: trace }
+#  file:
+#    name: springboot.log #在当前项目根目录下生成指定名称日志文件
+
+#指定范围设置日志的输出级别
+#logging:
+#  level: { com.example: trace }
+#  file:
+#    name: /xiang/springboot.log #自动创建目录生成指定名称的日志文件
+
+#指定范围设置日志的输出级别
+#logging:
+#  level: { com.example: trace }
+#  file:
+#    name: C:/xiang2/springboot2.log #自动创建目录生成指定名称的日志文件
+
+#指定范围设置日志的输出级别
+logging:
+  level: { com.example: trace }
+  file:
+    path: /var/log #在当前磁盘根目录下自动创建文件夹生成spring.log文件
+  pattern:
+    #在控制台输出的日志的格式
+    console: "%d{yyyy‐MM‐dd HH:mm:sss} [%thread] %level %logger{50} ‐ %msg%n"
+    #指定文件中日志输出的格式
+    file: "%d{yyyy‐MM‐dd} === [%thread] === %level === %logger{50} ==== %msg%n"
+
+#日志输出格式：
+#  %d表示日期时间，
+#  %thread表示线程名，
+#  %‐5level：级别从左显示5个字符宽度
+#  %logger{50} 表示logger名字最长50个字符，否则按照句点分割。
+#  %msg：日志消息，
+#  %n是换行符
+
+#指定范围设置日志的输出级别
+#logging:
+#  level: { com.example: trace }
+#  file:
+#    path: /var/log/xiang.log #在当前磁盘根目录下自动创建文件夹生成:/var/log/xiang.log/spring.log
 ---
 #test
 server:
