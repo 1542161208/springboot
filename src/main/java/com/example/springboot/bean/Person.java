@@ -14,7 +14,7 @@ import java.util.Map;
  * @Component:只有这个组件是容器中的组件,才能使用容器提供的功能
  */
 @Component
-@PropertySource(value = {"classpath:person.properties"})
+//@PropertySource(value = {"classpath:person.properties"})
 @ConfigurationProperties(prefix = "person")
 public class Person {
     private String lastName;
