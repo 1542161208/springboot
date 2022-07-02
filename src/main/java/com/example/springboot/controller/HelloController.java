@@ -15,4 +15,13 @@ public class HelloController {
 
         return "hello world!";
     }
+
+    /**
+     * thymeleaf使用
+     */
+    @RequestMapping("/success")
+    public String success() {
+        // classpath:templates/success.html
+        return "success";
+    }
 }
